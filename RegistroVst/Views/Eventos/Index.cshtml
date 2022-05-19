@@ -21,7 +21,7 @@
             <h3>Lista de Eventos</h3>
         </div>
         <div class="col-sm-6">
-            <a class="btn btn-success d-block" asp-action="Create" asp-controller="Eventos">
+            <a class="btn btn-success d-block" asp-action="Create" asp-controller="Eventos"> <i class="bi bi-person-plus-fill"></i>
                 Agregar Nuevo Evento
             </a>
         </div>
@@ -44,12 +44,12 @@
                     {
                     <tr>
                         <td>@item.Id</td>
-                        <td>@Html.DisplayNameFor(m => m.IdVisitante)</td>
-                        <td>@Html.DisplayNameFor(m => m.FechaEntrada)</td>
-                        <td>@Html.DisplayNameFor(m => m.Descripcion)</td>
+                        <td>@item.IdVisitante</td>
+                        <td>@item.FechaEntrada</td>
+                        <td>@item.Descripcion</td>                      
                         <td>
-                            <a asp-controller="Eventos" asp-action="Edit" asp-route-id="@item.Id" class="btn btn-warning">Editar</a>
-                            <a asp-controller="Eventos" asp-action="DeleteEvento" asp-route-id="@item.Id" class="btn btn-danger">Eliminar</a>
+                            <a asp-controller="Eventos" asp-action="Edit" asp-route-id="@item.Id" class="btn btn-warning"><i class="bi bi-pencil-square"></i>   Editar</a>
+                            <a asp-controller="Eventos" asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger"><i class="bi bi-trash"></i>   Eliminar</a>
                         </td>
                     </tr>
                     }

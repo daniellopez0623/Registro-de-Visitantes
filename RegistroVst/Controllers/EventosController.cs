@@ -82,12 +82,12 @@ namespace RegistroVst.Controllers
                 return NotFound();
             }
             // Obtener el Evento
-            var Evento = _context.Evento.Find(id);
-            if (Evento == null)
+            var evento = _context.Evento.Find(id);
+            if (evento == null)
             {
                 return NotFound();
             }
-            return View(Evento);
+            return View(evento);
         }
         //Http Post Delete
         [HttpPost]

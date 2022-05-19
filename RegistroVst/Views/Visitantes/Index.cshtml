@@ -21,8 +21,7 @@
             <h3>Lista de Visitantes</h3>
         </div>
         <div class="col-sm-6">
-            <a class="btn btn-success d-block" asp-action="Create" asp-controller="Visitantes">
-                Agregar Nuevo Visitante
+            <a class="btn btn-success d-block" asp-action="Create" asp-controller="Visitantes"><i class="bi bi-person-plus-fill"></i>   Agregar Nuevo Visitante
             </a>
         </div>
     </div>
@@ -50,8 +49,8 @@
                             <td>@item.FechaEntrada</td>
                             <td>@item.MotivoVisita</td>
                             <td>
-                                <a asp-controller="Visitantes" asp-action="Edit" asp-route-id="@item.Id" class="btn btn-warning">Editar</a>
-                                <a asp-controller="Visitantes" asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger">Eliminar</a>
+                                <a asp-controller="Visitantes" asp-action="Edit" asp-route-id="@item.Id" class="btn btn-warning"><i class="bi bi-pencil-square"></i>   Editar</a>
+                                <a asp-controller="Visitantes" asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger"><i class="bi bi-trash"></i>   Eliminar</a>
                             </td>
                         </tr>
                     }
