@@ -20,19 +20,19 @@ namespace RegistroVst.Controllers
         //Http Get Index
         public IActionResult Index()
         {
-            IEnumerable<Evento> listEventos = _context.Evento;
-            return View(listEventos);
+            IEnumerable<Evento> listHistorial = _context.Evento;
+            return View(listHistorial);
         }
 
         //Http Get Create
         public IActionResult Create()
-        {           
+        {
             return View();
         }
         //Http Post Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Create( Evento evento)
+        public IActionResult Create(Evento evento)
         {
             if (ModelState.IsValid)
             {

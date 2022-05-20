@@ -5,16 +5,14 @@ using System.Linq;
 using System.Threading.Tasks;
 using RegistroVst.Data;
 using RegistroVst.Models;
-using System.Linq.Dynamic.Core;
-
 
 namespace RegistroVst.Controllers
 {
-    public class VisitantesController : Controller
+    public class HistorialesController : Controller
     {
         private readonly ApplicationDbContext _context;
 
-        public VisitantesController(ApplicationDbContext context)
+        public HistorialesController(ApplicationDbContext context)
         {
             _context = context;
         }
@@ -22,33 +20,32 @@ namespace RegistroVst.Controllers
         //Http Get Index
         public IActionResult Index()
         {
-            IEnumerable<Visitante> listVisitantes = _context.Visitante;
-            return View(listVisitantes);
+            IEnumerable<Historial> listHistorial = _context.Historial;
+            return View(listHistorial);
         }
 
         //Http Get Create
         public IActionResult Create()
-        {           
+        {
             return View();
         }
+
         //Http Post Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Create( Visitante visitante)
+        public IActionResult Create(Historial historial)
         {
             if (ModelState.IsValid)
             {
-                _context.Visitante.Add(visitante);
+                _context.Historial.Add(historial);
                 _context.SaveChanges();
 
-                //  var productos=ctx.products.Include(x=>x.category).OrderBy(x=>x.category.category_name).ThenBy(x=>x.product_name).Tolist();
-
-
-                TempData["mensaje"] = "El Visitante se ha registrado correctamente";
+                TempData["mensaje"] = "El Historial se ha registrado correctamente";
                 return RedirectToAction("Index");
             }
             return View();
         }
+
         //Http Get Edit
         public IActionResult Edit(int? id)
         {
@@ -56,29 +53,30 @@ namespace RegistroVst.Controllers
             {
                 return NotFound();
             }
-            // Obtener el Visitante
-            var Visitante = _context.Visitante.Find(id);
-            if (Visitante == null)
+            var Historial = _context.Historial.Find(id);
+            if (Historial == null)
             {
                 return NotFound();
             }
-            return View(Visitante);
+            return View(Historial);
         }
+
         //Http Post Edit
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Edit(Visitante visitante)
+        public IActionResult Edit(Historial historial)
         {
             if (ModelState.IsValid)
             {
-                _context.Visitante.Update(visitante);
+                _context.Historial.Update(historial);
                 _context.SaveChanges();
 
-                TempData["mensaje"] = "El Visitante se ha actualizado correctamente";
+                TempData["mensaje"] = "El Historial se ha actualizado correctamente";
                 return RedirectToAction("Index");
             }
             return View();
         }
+
         //Http Get Delete
         public IActionResult Delete(int? id)
         {
@@ -86,30 +84,30 @@ namespace RegistroVst.Controllers
             {
                 return NotFound();
             }
-            // Obtener el libro
-            var Visitante = _context.Visitante.Find(id);
-            if (Visitante == null)
+            var historial = _context.Historial.Find(id);
+            if (historial == null)
             {
                 return NotFound();
             }
-            return View(Visitante);
+            return View(historial);
         }
+
         //Http Post Delete
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult DeleteVisitante(int? id)
+        public IActionResult DeleteHistorial(int? id)
         {
-            // Obtener el Visitante por id
-            var visitan = _context.Visitante.Find(id);
-            if (visitan == null)
+            // Obtener el Historial por id
+            var historial = _context.Historial.Find(id);
+            if (historial == null)
             {
                 return NotFound();
 
             }
-            _context.Visitante.Remove(visitan);
+            _context.Historial.Remove(historial);
             _context.SaveChanges();
 
-            TempData["mensaje"] = "El visitante se ha eliminado correctamente";
+            TempData["mensaje"] = "El Historial se ha eliminado correctamente";
             return RedirectToAction("Index");
         }
 

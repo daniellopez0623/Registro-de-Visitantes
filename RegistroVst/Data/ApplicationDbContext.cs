@@ -17,7 +17,7 @@ namespace RegistroVst.Data
         }
         public DbSet<Visitante> Visitante { get; set; }
         public DbSet<Evento> Evento { get; set; }
-       // public DbSet<Visitante> Visitante { get; set; }
+        public DbSet<Historial> Historial { get; set; }
 
     }
 }

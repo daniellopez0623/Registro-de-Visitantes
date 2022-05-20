@@ -436,3 +436,8 @@ C:\Users\Daniel Lopez\source\repos\RegistroVst\RegistroVst\obj\Debug\net5.0\Razo
 C:\Users\Daniel Lopez\source\repos\RegistroVst\RegistroVst\obj\Debug\net5.0\Razor\Views\Eventos\Edit.cshtml.g.cs
 C:\Users\Daniel Lopez\source\repos\RegistroVst\RegistroVst\obj\Debug\net5.0\Razor\Views\Eventos\Index.cshtml.g.cs
 C:\Users\Daniel Lopez\source\repos\RegistroVst\RegistroVst\obj\Debug\net5.0\refint\RegistroVst.dll
+C:\Users\Daniel Lopez\source\repos\RegistroVst\RegistroVst\bin\Debug\net5.0\System.Linq.Dynamic.Core.dll
+C:\Users\Daniel Lopez\source\repos\RegistroVst\RegistroVst\obj\Debug\net5.0\Razor\Views\Historiales\Create.cshtml.g.cs
+C:\Users\Daniel Lopez\source\repos\RegistroVst\RegistroVst\obj\Debug\net5.0\Razor\Views\Historiales\Delete.cshtml.g.cs
+C:\Users\Daniel Lopez\source\repos\RegistroVst\RegistroVst\obj\Debug\net5.0\Razor\Views\Historiales\Edit.cshtml.g.cs
+C:\Users\Daniel Lopez\source\repos\RegistroVst\RegistroVst\obj\Debug\net5.0\Razor\Views\Historiales\Index.cshtml.g.cs
